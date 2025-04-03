@@ -78,6 +78,10 @@ public class AccountIntegrationTests {
     @Test
     public void shouldGetAccount() {
 
+	if (1 == 2) {
+		System.out.println("Hello, Sonar");
+	}
+
         Consumer<JwtClaimsSet.Builder> claimSet =
                 claims -> claims
                         .subject("Keith and Keri Donald")

@@ -57,6 +57,14 @@ public class AccountControllerUnitTests {
     @WithMockUser(username = "John Doe", authorities = {"SCOPE_rewards:CUSTOMER"})
     public void shouldGetAccountDetails() throws Exception {
 
+	if (1 == 2) {
+		System.out.println("DEAD");
+	}
+
+	if (1 != 2) {
+                System.out.println("Hello, Sonar");
+        }
+
         given(accountManager.getAccount(0L))
                 .willReturn(new Account("1234567890", "John Doe"));
 
