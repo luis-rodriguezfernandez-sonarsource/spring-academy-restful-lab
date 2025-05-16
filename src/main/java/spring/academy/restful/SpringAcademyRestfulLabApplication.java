@@ -5,6 +5,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 import static org.apache.coyote.http11.Constants.a;
 
@@ -12,6 +17,16 @@ import static org.apache.coyote.http11.Constants.a;
 public class SpringAcademyRestfulLabApplication {
 
     public static void main(String[] args) {
+        File file = new File("file.txt");
+        file.deleteOnExit();  // Noncompliant
+        Date now = new Date();  // Noncompliant
+        DateFormat df = new SimpleDateFormat("dd.MM.yyyy");
+        Calendar christmas = Calendar.getInstance();  // Noncompliant
+        try {
+            christmas.setTime(df.parse("25.12.2020"));
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
         boolean a = true;
         boolean b = false;
         boolean c = false;
