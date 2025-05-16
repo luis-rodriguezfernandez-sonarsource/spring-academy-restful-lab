@@ -12,6 +12,8 @@ import static org.apache.coyote.http11.Constants.a;
 public class SpringAcademyRestfulLabApplication {
 
     public static void main(String[] args) {
+        File file = new File("file.txt");
+        file.deleteOnExit();  // Noncompliant
         boolean a = true;
         boolean b = false;
         boolean c = false;
