@@ -51,4 +51,4 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-        run: ./gradlew --build-cache sonar -Dsonar.projectKey=lurodrig-sonarsource_spring-academy-restful-lab_d90a2c77-faca-436f-aa21-6ae56e5e681e
+        run: ./gradlew --build-cache sonar -Dsonar.projectKey=luis-rodriguezfernandez-sonarsource_spring-academy-restful-lab -Dsonar.organization=lurodrig-sonarsource
