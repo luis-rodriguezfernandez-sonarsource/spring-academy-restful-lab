@@ -5,8 +5,8 @@ scrape_configs:
     static_configs:
       - targets: ['localhost:8080']
     oauth2:
+      token_url: 'https://dev-3luybo0t8652zavi.us.auth0.com/oauth/token'
       client_id: PROMETHEUS_REWARDS_API_CLIENT_ID
       client_secret: PROMETHEUS_REWARDS_API_CLIENT_SECRET
-      token_url: 'https://dev-3luybo0t8652zavi.us.auth0.com/oauth/token'
       endpoint_params:
         audience: 'https://api.rewards.com'
