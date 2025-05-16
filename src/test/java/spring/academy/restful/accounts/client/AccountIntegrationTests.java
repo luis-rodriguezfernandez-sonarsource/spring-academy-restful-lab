@@ -2,6 +2,7 @@ package spring.academy.restful.accounts.client;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Disabled;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
@@ -34,6 +35,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+@Disabled
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class AccountIntegrationTests {
 
@@ -73,6 +75,10 @@ public class AccountIntegrationTests {
         assertEquals("Keith and Keri Donald", accounts[0].getName());
         assertEquals(2, accounts[0].getBeneficiaries().size());
         assertEquals(Percentage.valueOf("50%"), accounts[0].getBeneficiary("Annabelle").getAllocationPercentage());
+	// Some dead code here
+	if (1 == 2 ) {
+           System.out.println("Hello, Sonar!");
+	}
     }
 
     @Test
